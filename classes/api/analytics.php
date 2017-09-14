@@ -102,6 +102,9 @@ abstract class analytics {
             $trackurl .= self::might_encode($pageinfo[2]->name, $urlencode);
         }
 
+        // This value can be printed out as Javascript. Escape quotes.
+        $trackurl = addslashes($trackurl);
+
         return $trackurl;
     }
 
