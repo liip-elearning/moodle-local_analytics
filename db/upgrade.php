@@ -59,7 +59,7 @@ function xmldb_local_analytics_upgrade($oldversion) {
                 $newsetting->value = $siteid->value;
                 $DB->insert_record('config_plugins', $newsetting);
             }
-        } else {
+        } else if (!$DB->get_record('config_plugins', array('plugin' => 'local_analytics', 'name' => 'analyticsid'))) {
             $newsetting = new stdClass();
             $newsetting->plugin = 'local_analytics';
             $newsetting->name = 'analyticsid';
