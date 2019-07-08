@@ -12,10 +12,9 @@ The plugin features the following options:
 3. Configure the plugin
 
 ## Configuration
-The plugin currently supports 3 Analytics modes:
+The plugin currently supports 2 Analytics modes:
 * Piwik
-* Google Universal Analytics
-* Google Legacy Analytics.
+* Google Universal Analytics.
 
 ### Piwik
 - Set the Site ID
@@ -32,19 +31,16 @@ The plugin currently supports 3 Analytics modes:
 - Choose whether you want to send Clean URLs (not recommended):
 	Google analytics will no longer be able to use overlays and linking back to your Moodle site
 
-### Google Legacy Analytics (soon deprecated by Google)
-- Plugin modifies the page speed sample to have 50% of your visitors samples for page speed instead of 1% making it much more useful
-- Set your Google tracking ID
-- Choose whether you want to track admins (not recommended)
-- Choose whether you want to send Clean URLs (not recommended):
-	Google analytics will no longer be able to use overlays and linking back to your Moodle site
-
 ## How does it work?
 
 The plugin will inject tracking code for Analytics' purposes in every page through a callback.
 If debugging is enabled, the URL that is tracked will be displayed on the bottom of the page.
 
 ## Changelog - Release notes
+
+### version: 2019070801
+
+- Remove legacy Google Analytics mode
 
 ### version: 2019070800
 
@@ -69,4 +65,3 @@ Implemented the trick to push the JS code into each page by Daniel Thee Roperto 
 ### version: 2015012200
 
 - Removed the debugging URL display on the page, If debugging is required use your browsers view source feature.
-
